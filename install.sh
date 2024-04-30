@@ -37,3 +37,12 @@ else
     #TODO :Copilot setup
 fi
 
+# https://github.com/airblade/vim-gitgutter
+if [ -d ~/.vim/pack/airblade/start/vim-gitgutter ]; then
+    echo "vim-gitgutter already installed"
+else
+    echo "install vim-gitgutter"
+    git clone https://github.com/airblade/vim-gitgutter.git ~/.vim/pack/airblade/start/vim-gitgutter
+    vim -u NONE -c "helptags vim-gitgutter/doc" -c q
+fi
+
