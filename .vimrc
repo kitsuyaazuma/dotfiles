@@ -1,4 +1,5 @@
 set number
+set updatetime=250
 
 "https://github.com/ku1ik/vim-monokai
 syntax enable
@@ -9,6 +10,14 @@ highlight NonText ctermbg=none
 highlight LineNr ctermbg=none
 highlight Folded ctermbg=none
 highlight EndOfBuffer ctermbg=none
+
+highlight! link SignColumn LineNr
+set signcolumn=yes
+highlight GitGutterAdd    guifg=#009900 ctermfg=2
+highlight GitGutterChange guifg=#bbbb00 ctermfg=3
+highlight GitGutterDelete guifg=#ff2222 ctermfg=1
+highlight link GitGutterChangeLine DiffText
+" let g:gitgutter_highlight_lines = 1
 
 call plug#begin()
 
