@@ -54,3 +54,10 @@ else
     vim -u NONE -c "helptags vim-gitgutter/doc" -c q
 fi
 
+mkdir -p ~/.vim/config
+if [-f ~/.vim/config/coc-example-config.vim ]; then
+    echo "coc.nvim already configured"
+else
+    echo "configure coc.nvim"
+    wget https://raw.githubusercontent.com/neoclide/coc.nvim/master/doc/coc-example-config.vim -P ~/.vim/config/
+fi

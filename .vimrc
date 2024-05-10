@@ -1,5 +1,6 @@
 set number
-set updatetime=250
+
+runtime! config/*.vim
 
 "https://github.com/ku1ik/vim-monokai
 syntax enable
@@ -23,8 +24,14 @@ call plug#begin()
 
 " https://github.com/neoclide/coc.nvim
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+" CocInstall coc-go
+
+" https://github.com/previm/previm
+Plug 'kannokanno/previm'
 
 call plug#end()
+
+let g:previm_open_cmd = 'open -a "Google Chrome"'
 
 set nocompatible
 filetype off
