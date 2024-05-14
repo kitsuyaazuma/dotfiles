@@ -55,7 +55,7 @@ else
 fi
 
 mkdir -p ~/.vim/config
-if [-f ~/.vim/config/coc-example-config.vim ]; then
+if [ -f ~/.vim/config/coc-example-config.vim ]; then
     echo "coc.nvim already configured"
 else
     echo "configure coc.nvim"
