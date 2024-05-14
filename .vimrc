@@ -29,6 +29,9 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 " https://github.com/previm/previm
 Plug 'kannokanno/previm'
 
+" https://github.com/mhinz/vim-startify
+Plug 'mhinz/vim-startify'
+
 call plug#end()
 
 let g:previm_open_cmd = 'open -a "Google Chrome"'
