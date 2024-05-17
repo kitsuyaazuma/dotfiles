@@ -32,6 +32,9 @@ Plug 'kannokanno/previm'
 " https://github.com/mhinz/vim-startify
 Plug 'mhinz/vim-startify'
 
+" https://github.com/mattn/vim-goimports
+Plug 'mattn/vim-goimports'
+
 call plug#end()
 
 let g:previm_open_cmd = 'open -a "Google Chrome"'
