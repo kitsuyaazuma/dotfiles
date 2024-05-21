@@ -35,6 +35,9 @@ Plug 'mhinz/vim-startify'
 " https://github.com/mattn/vim-goimports
 Plug 'mattn/vim-goimports'
 
+" https://github.com/lambdalisue/vim-fern
+Plug 'lambdalisue/fern.vim'
+
 call plug#end()
 
 let g:previm_open_cmd = 'open -a "Google Chrome"'
