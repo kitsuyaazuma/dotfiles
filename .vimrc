@@ -24,7 +24,8 @@ call plug#begin()
 
 " https://github.com/neoclide/coc.nvim
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-" CocInstall coc-go
+" :CocInstall coc-go
+" :CocCommand go.install.gopls
 
 " https://github.com/previm/previm
 Plug 'kannokanno/previm'

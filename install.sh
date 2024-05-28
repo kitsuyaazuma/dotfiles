@@ -4,12 +4,7 @@
 set -u
 BASEDIR=$(dirname $0)
 cd $BASEDIR
-for f in .??*; do
-    [ "$f" = ".git" ] && continue
-    [ "$f" = ".gitconfig.local.template" ] && continue
-    [ "$f" = ".gitmodules" ] && continue
-    ln -snfv ${PWD}/"$f" ~/
-done
+ln -snfv ${PWD}/.vimrc ~/
 
 # https://github.com/junegunn/vim-plug
 if [ -f ~/.vim/autoload/plug.vim ]; then
@@ -61,3 +56,4 @@ else
     echo "configure coc.nvim"
     wget https://raw.githubusercontent.com/neoclide/coc.nvim/master/doc/coc-example-config.vim -P ~/.vim/config/
 fi
+ln -snfv ${PWD}/coc-settings.json ~/.vim/
