@@ -39,9 +39,15 @@ Plug 'mattn/vim-goimports'
 " https://github.com/lambdalisue/vim-fern
 Plug 'lambdalisue/fern.vim'
 
+" https://github.com/vim-airline/vim-airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 call plug#end()
 
 let g:previm_open_cmd = 'open -a "Google Chrome"'
+
+let g:airline#extensions#tabline#enabled = 1
 
 set nocompatible
 filetype off
