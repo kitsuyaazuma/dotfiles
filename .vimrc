@@ -47,6 +47,8 @@ call plug#end()
 
 let g:previm_open_cmd = 'open -a "Google Chrome"'
 
+nnoremap <C-n> :Fern . -reveal=% -drawer -toggle -width=40<CR>
+
 let g:airline#extensions#tabline#enabled = 1
 
 set nocompatible
