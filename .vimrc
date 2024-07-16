@@ -43,6 +43,9 @@ Plug 'lambdalisue/fern.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" https://github.com/hashivim/vim-terraform
+Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
+
 call plug#end()
 
 let g:previm_open_cmd = 'open -a "Google Chrome"'
