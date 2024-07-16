@@ -49,6 +49,21 @@ else
     vim -u NONE -c "helptags vim-gitgutter/doc" -c q
 fi
 
+# https://github.com/juliosueiras/terraform-lsp
+if [ -d ~/.vim/pack/juliosueiras/start/terraform-lsp ]; then
+    echo "terraform-lsp already installed"
+else
+    echo "install terraform-lsp"
+    git clone https://github.com/juliosueiras/terraform-lsp.git ~/.vim/pack/juliosueiras/start/terraform-lsp
+    pushd ~/.vim/pack/juliosueiras/start/terraform-lsp
+    GO111MODULE=on go mod download
+    make
+    make copy
+    popd
+    echo 'export PATH=$PATH:~/.bin' >> ~/.zshrc
+    # source ~/.zshrc
+fi
+
 mkdir -p ~/.vim/config
 if [ -f ~/.vim/config/coc-example-config.vim ]; then
     echo "coc.nvim already configured"

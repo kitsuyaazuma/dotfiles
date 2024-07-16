@@ -7,6 +7,10 @@
       "initializationOptions": {
         "usePlaceholders": true
       }
+    },
+    "terraform": {
+      "command": "terraform-lsp",
+      "filetypes": ["terraform"]
     }
   },
   "diagnostic.virtualText": true
