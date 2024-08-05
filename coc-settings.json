@@ -1,17 +1,34 @@
 {
-  "languageserver": {
-    "golang": {
-      "command": "gopls",
-      "rootPatterns": ["go.work", "go.mod", ".vim/", ".git/", ".hg/"],
-      "filetypes": ["go"],
-      "initializationOptions": {
-        "usePlaceholders": true
-      }
-    },
-    "terraform": {
-      "command": "terraform-lsp",
-      "filetypes": ["terraform"]
-    }
-  },
-  "diagnostic.virtualText": true
+	"languageserver": {
+		"golang": {
+			"command": "gopls",
+			"rootPatterns": [
+				"go.work",
+				"go.mod",
+				".vim/",
+				".git/",
+				".hg/"
+			],
+			"filetypes": [
+				"go"
+			],
+			"initializationOptions": {
+				"usePlaceholders": true
+			}
+		},
+		"terraform": {
+			"command": "terraform-lsp",
+			"filetypes": [
+				"terraform"
+			]
+		}
+	},
+	"diagnostic.virtualText": true,
+	"pyright.inlayHints.parameterTypes": false,
+	"python.linting.enabled": true,
+	"python.formatting.provider": "ruff",
+	"python.linting.ruffEnabled": true,
+	"[python]": {
+		"coc.preferences.formatOnSave": true
+	}
 }
