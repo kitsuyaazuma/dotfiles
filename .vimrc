@@ -1,4 +1,5 @@
 set number
+set backspace=2
 
 runtime! config/*.vim
 
