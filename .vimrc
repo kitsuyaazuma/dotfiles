@@ -27,6 +27,10 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 " :CocInstall coc-go
 " :CocCommand go.install.gopls
 " :CocInstall coc-pyright
+" :CocInstall coc-rust-analyzer
+
+" https://github.com/rust-lang/rust.vim
+Plug 'rust-lang/rust.vim'
 
 " https://github.com/previm/previm
 Plug 'kannokanno/previm'
@@ -50,6 +54,8 @@ Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 call plug#end()
 
 let g:previm_open_cmd = 'open -a "Google Chrome"'
+
+let g:rustfmt_autosave = 1
 
 nnoremap <C-n> :Fern . -reveal=% -drawer -toggle -width=40<CR>
 let g:fern#default_hidden = 1
