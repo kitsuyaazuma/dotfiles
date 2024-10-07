@@ -31,6 +31,9 @@ Plug 'lambdalisue/vim-nerdfont'
 " https://github.com/lambdalisue/vim-fern-renderer-nerdfont
 Plug 'lambdalisue/vim-fern-renderer-nerdfont'
 
+" https://github.com/lambdalisue/vim-fern-git-status
+Plug 'lambdalisue/vim-fern-git-status'
+
 " https://github.com/lambdalisue/vim-glyph-palette
 Plug 'lambdalisue/vim-glyph-palette'
 
