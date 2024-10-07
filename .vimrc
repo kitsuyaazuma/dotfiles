@@ -59,6 +59,8 @@ Plug 'mattn/vim-goimports'
 
 " https://github.com/lambdalisue/vim-fern
 Plug 'lambdalisue/fern.vim'
+" https://github.com/yuki-yano/fern-preview.vim
+Plug 'yuki-yano/fern-preview.vim'
 
 " https://github.com/vim-airline/vim-airline
 Plug 'vim-airline/vim-airline'
@@ -84,16 +86,4 @@ augroup my-glyph-palette
   autocmd FileType fern call glyph_palette#apply()
   autocmd FileType nerdtree,startify call glyph_palette#apply()
 augroup END
-
-
-" set nocompatible
-" filetype off
-" set rtp+=~/.vim/bundle/Vundle.vim
-" call vundle#begin()
-
-" " let Vundle manage Vundle, required
-" Plugin 'VundleVim/Vundle.vim'
-" 
-" call vundle#end()            " required
-" filetype plugin indent on    " required
 
