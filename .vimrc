@@ -1,5 +1,7 @@
 set number
 set backspace=2
+set guifont="Hack Nerd Font"
+set encoding=UTF-8
 
 runtime! config/*.vim
 
@@ -22,6 +24,15 @@ highlight link GitGutterChangeLine DiffText
 " let g:gitgutter_highlight_lines = 1
 
 call plug#begin()
+
+" https://github.com/lambdalisue/vim-nerdfont
+Plug 'lambdalisue/vim-nerdfont'
+
+" https://github.com/lambdalisue/vim-fern-renderer-nerdfont
+Plug 'lambdalisue/vim-fern-renderer-nerdfont'
+
+" https://github.com/lambdalisue/vim-glyph-palette
+Plug 'lambdalisue/vim-glyph-palette'
 
 " https://github.com/neoclide/coc.nvim
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
@@ -60,17 +71,25 @@ let g:rustfmt_autosave = 1
 
 nnoremap <C-n> :Fern . -reveal=% -drawer -toggle -width=40<CR>
 let g:fern#default_hidden = 1
+let g:fern#renderer = "nerdfont"
 
 let g:airline#extensions#tabline#enabled = 1
 
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+augroup my-glyph-palette
+  autocmd! *
+  autocmd FileType fern call glyph_palette#apply()
+  autocmd FileType nerdtree,startify call glyph_palette#apply()
+augroup END
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
 
-call vundle#end()            " required
-filetype plugin indent on    " required
+" set nocompatible
+" filetype off
+" set rtp+=~/.vim/bundle/Vundle.vim
+" call vundle#begin()
+
+" " let Vundle manage Vundle, required
+" Plugin 'VundleVim/Vundle.vim'
+" 
+" call vundle#end()            " required
+" filetype plugin indent on    " required
 

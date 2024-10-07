@@ -6,6 +6,15 @@ BASEDIR=$(dirname $0)
 cd $BASEDIR
 ln -snfv ${PWD}/.vimrc ~/
 
+# https://github.com/ryanoasis/nerd-fonts
+if [ -d ~/nerd-fonts ]; then
+    echo "nerd-fonts already installed"
+else
+    echo "install nerd-fonts"
+    git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git ~/nerd-fonts
+    pushd ~/nerd-fonts; chmod +x install.sh; ./install.sh Hack; popd
+fi
+
 # https://github.com/junegunn/vim-plug
 if [ -f ~/.vim/autoload/plug.vim ]; then
     echo "vim-plug already installed"
