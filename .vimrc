@@ -45,6 +45,9 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 " :CocInstall coc-pyright
 " :CocInstall coc-rust-analyzer
 
+" https://github.com/easymotion/vim-easymotion
+Plug 'easymotion/vim-easymotion'
+
 " https://github.com/rust-lang/rust.vim
 Plug 'rust-lang/rust.vim'
 
