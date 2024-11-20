@@ -1,6 +1,5 @@
 set number
 set backspace=2
-set clipboard=unnamedplus
 set guifont="Hack Nerd Font"
 set encoding=UTF-8
 
