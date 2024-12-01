@@ -28,11 +28,12 @@ if ! command -v nvim &> /dev/null; then
 	fi
 	;;
     Linux)
-            echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.bashrc
 	    curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 	    mkdir -p ~/.local/bin/nvim
-            mv ./nvim.appimage ~/.local/bin/nvim
-	    chmod +x ~/.local/bin/nvim/nvim.appimage
+            mv ./nvim.appimage ~
+	    chmod +x ~/nvim.appimage
+	    echo 'alias nvim="~/nvim.appimage"' >> ~/.bashrc
+            source ~/.bashrc
 	;;
     esac
 fi
