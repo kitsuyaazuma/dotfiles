@@ -28,6 +28,7 @@ if ! command -v nvim &> /dev/null; then
 	fi
 	;;
     Linux)
+            echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.bashrc
 	    curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 	    mkdir -p ~/.local/bin/nvim
             mv ./nvim.appimage ~/.local/bin/nvim
