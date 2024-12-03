@@ -4,8 +4,8 @@ set -u
 BASE_DIR=$(dirname $0)
 cd $BASE_DIR
 NVIM_DIR=${HOME}/.config/nvim
-mkdir -p ${NVIM_DIR}
-ln -snfv ${PWD}/nvim/ ${NVIM_DIR}
+rm -rf ${NVIM_DIR}
+ln -snfv ${PWD}/nvim ${NVIM_DIR}
 
 OS=$(uname -s)
 
@@ -14,18 +14,7 @@ if ! command -v nvim &> /dev/null; then
     # https://github.com/neovim/neovim/blob/master/INSTALL.md
     case "${OS}" in
     Darwin)
-	ARCH=$(uname -m)
-	if [ "${ARCH}" = "arm64" ]; then
-	    curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-arm64.tar.gz
-            tar xzf nvim-macos-arm64.tar.gz
-	    mv mv nvim-macos-arm64 ~/bin
-	    rm nvim-macos-arm64.tar.gz
-        elif [ "${ARCH}" = "x86_64" ]; then
-	    curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-x86_64.tar.gz
-            tar xzf nvim-macos-x86_64.tar.gz
-	    mv nvim-macos-x86_64 ~/bin
-	    rm nvim-macos-x86_64.tar.gz
-	fi
+	    brew install neovim
 	;;
     Linux)
 	    curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
