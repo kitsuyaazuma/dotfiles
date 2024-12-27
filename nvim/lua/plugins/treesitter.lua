@@ -10,6 +10,8 @@ return {
 				"gomod",
 				"gowork",
 				"gosum",
+				"python",
+				"rust",
 			},
 			sync_install = false,
 			highlight = { enable = true },
