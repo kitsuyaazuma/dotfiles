@@ -11,12 +11,18 @@ return {
 		{
 			"williamboman/mason-lspconfig.nvim",
 			config = function()
+				local lspconfig = require("lspconfig")
 				require("mason-lspconfig").setup({
-					ensure_installed = { "rust_analyzer" },
+					ensure_installed = {
+						"gopls",
+						"pyright",
+						"rust_analyzer",
+						"ts_ls",
+					},
 				})
 				require("mason-lspconfig").setup_handlers({
 					function(server_name)
-						require("lspconfig")[server_name].setup({})
+						lspconfig[server_name].setup({})
 					end,
 				})
 			end,

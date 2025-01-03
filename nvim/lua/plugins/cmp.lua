@@ -8,10 +8,14 @@ return {
 		'hrsh7th/cmp-cmdline',
 		'L3MON4D3/LuaSnip',
 		'saadparwaiz1/cmp_luasnip',
+		'onsails/lspkind-nvim',
 	},
 	config = function()
 		local cmp = require('cmp')
 		local luasnip = require('luasnip')
+		local lspkind = require('lspkind')
+
+		vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
 
 		cmp.setup({
 			snippet = {
@@ -27,6 +31,16 @@ return {
 				["<C-Space>"] = cmp.mapping.complete(),
 				["<CR>"] = cmp.mapping.confirm({ select = true }),
 		  	}),
+			formatting = {
+				fields = { 'abbr', 'kind', 'menu' },
+				format = lspkind.cmp_format({
+					mode = 'symbol_text',
+					with_text = true,
+					maxwidth = { menu = 50, abbr = 50 },
+					ellipsis_char = '...',
+					show_labelDetails = true,
+				}),
+			},
 			sources = cmp.config.sources({
 		    		{ name = "nvim_lsp" },
 				{ name = "luasnip" },
@@ -34,6 +48,28 @@ return {
 		  	}, {
 		    		{ name = "buffer" },
 		  	}),
+		})
+
+		cmp.setup.cmdline({ '/', '?' }, {
+			mapping = cmp.mapping.preset.cmdline(),
+			sources = cmp.config.sources({
+				{ name = 'buffer' },
+			}),
+		})
+
+		cmp.setup.cmdline(':', {
+			mapping = cmp.mapping.preset.cmdline(),
+			sources = cmp.config.sources({
+				{ name = 'path' },
+			}, {
+				{ name = 'cmdline' },
+			})
+		})
+
+		local capabilities = require('cmp_nvim_lsp').default_capabilities()
+		
+		require('lspconfig').ts_ls.setup({
+			capabilities = capabilities,
 		})
 	end
 }
