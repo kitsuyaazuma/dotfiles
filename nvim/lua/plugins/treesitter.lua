@@ -14,6 +14,7 @@ return {
                 "lua",
 				"python",
 				"rust",
+                "terraform",
                 "tsx",
                 "typescript",
 			},
