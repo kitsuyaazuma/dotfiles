@@ -19,6 +19,7 @@ return {
 						"rust_analyzer",
                         "terraformls",
 						"ts_ls",
+                        "yamlls",
 					},
 				})
 				require("mason-lspconfig").setup_handlers({

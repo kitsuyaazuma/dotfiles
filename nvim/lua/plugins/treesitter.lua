@@ -17,6 +17,7 @@ return {
                 "terraform",
                 "tsx",
                 "typescript",
+                "yaml",
 			},
 			sync_install = false,
 			highlight = { enable = true },
