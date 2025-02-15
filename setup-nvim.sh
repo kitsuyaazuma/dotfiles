@@ -14,15 +14,16 @@ if ! command -v nvim &> /dev/null; then
     # https://github.com/neovim/neovim/blob/master/INSTALL.md
     case "${OS}" in
     Darwin)
-	    brew install neovim
+	brew install neovim
 	;;
     Linux)
-	    curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-	    mkdir -p ~/.local/bin/nvim
-            mv ./nvim.appimage ~
-	    chmod +x ~/nvim.appimage
-	    echo 'alias nvim="~/nvim.appimage"' >> ~/.bashrc
-            source ~/.bashrc
+	apt install neovim
+	# curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
+	# chmod u+x nvim-linux-x86_64.appimage
+	# ./nvim-linux-x86_64.appimage --appimage-extract
+	# ./squashfs-root/AppRun --version
+	# sudo mv squashfs-root /
+	# sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
 	;;
     esac
 fi
