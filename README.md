@@ -20,7 +20,7 @@ chmod +x ./setup-vim.sh
 ### Neovim
 
 ```bash
-chmod +x ./setup-nvim.sh
-./setup-nvim.sh
+chmod +x ./setup-neovim.sh
+./setup-neovim.sh
 source ~/.bashrc
 ```

@@ -5,7 +5,7 @@ BASE_DIR=$(dirname $0)
 cd $BASE_DIR
 NVIM_DIR=${HOME}/.config/nvim
 rm -rf ${NVIM_DIR}
-ln -snfv ${PWD}/nvim ${NVIM_DIR}
+ln -snfv ${PWD}/neovim ${NVIM_DIR}
 
 OS=$(uname -s)
 
