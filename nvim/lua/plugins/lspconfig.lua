@@ -3,13 +3,13 @@ return {
 	event = "BufReadPre",
 	dependencies = {
 		{
-			"williamboman/mason.nvim",
+			"mason.org/mason.nvim",
 			config = function()
 				require("mason").setup()
 			end,
 		},
 		{
-			"williamboman/mason-lspconfig.nvim",
+			"mason.org/mason-lspconfig.nvim",
 			config = function()
 				local lspconfig = require("lspconfig")
 				require("mason-lspconfig").setup({
@@ -21,11 +21,9 @@ return {
 						"ts_ls",
                         "yamlls",
 					},
-				})
-				require("mason-lspconfig").setup_handlers({
-					function(server_name)
-						lspconfig[server_name].setup({})
-					end,
+                    automatic_enabled = {
+                        exclude = { "rust_analyzer", "terraformls" },
+                    }
 				})
 			end,
 		},
