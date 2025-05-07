@@ -4,14 +4,14 @@
 set -u
 BASEDIR=$(dirname $0)
 cd $BASEDIR
-ln -snfv ${PWD}/.vimrc ~/
+ln -snfv ${PWD}/vim/.vimrc ~/
 
 if ! command -v node &> /dev/null; then
     echo "install Node.js"
 
     if ! command -v nvm &> /dev/null; then
 	echo "install nvm"
-	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
+	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 	export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
     fi
@@ -34,14 +34,6 @@ if [ -f ~/.vim/autoload/plug.vim ]; then
 else
     echo "install vim-plug"
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-fi
-
-# https://github.com/VundleVim/Vundle.vim
-if [ -d ~/.vim/bundle/Vundle.vim ]; then
-    echo "Vundle.vim already installed"
-else
-    echo "install Vundle.vim"
-    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 fi
 
 # https://github.com/ku1ik/vim-monokai
@@ -93,4 +85,4 @@ else
     echo "configure coc.nvim"
     wget https://raw.githubusercontent.com/neoclide/coc.nvim/master/doc/coc-example-config.vim -P ~/.vim/config/
 fi
-ln -snfv ${PWD}/coc-settings.json ~/.vim/
+ln -snfv ${PWD}/vim/coc-settings.json ~/.vim/
