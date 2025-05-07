@@ -1,12 +1,12 @@
 # dotfiles
 
-This is [kitsuya0828](https://github.com/kitsuya0828)'s dotfiles.
+This is [kitsuyaazuma](https://github.com/kitsuyaazuma)'s dotfiles.
 
 ## Installation
 
 ```bash
 cd ~
-git clone git@github.com:kitsuya0828/dotfiles.git
+git clone git@github.com:kitsuyaazuma/dotfiles.git
 cd dotfiles
 ```
 
