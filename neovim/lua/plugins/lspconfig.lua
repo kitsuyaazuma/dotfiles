@@ -3,13 +3,13 @@ return {
 	event = "BufReadPre",
 	dependencies = {
 		{
-			"mason.org/mason.nvim",
+			"mason-org/mason.nvim",
 			config = function()
 				require("mason").setup()
 			end,
 		},
 		{
-			"mason.org/mason-lspconfig.nvim",
+			"mason-org/mason-lspconfig.nvim",
 			config = function()
 				local lspconfig = require("lspconfig")
 				require("mason-lspconfig").setup({
