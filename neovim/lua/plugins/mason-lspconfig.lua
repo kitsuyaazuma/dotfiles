@@ -8,9 +8,9 @@ return {
 	},
 	opts = {
 		ensure_installed = {
+			"basedpyright",
 			"gopls",
 			"lua_ls",
-			"pyright",
 			"rust_analyzer",
 			"terraformls",
 			"ts_ls",

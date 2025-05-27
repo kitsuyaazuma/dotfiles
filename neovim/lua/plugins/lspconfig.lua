@@ -16,8 +16,22 @@ return {
 				source = "always",
 			},
 		},
+		inlay_hints = {
+			enabled = true,
+		},
 	},
 	config = function(_, opts)
 		vim.diagnostic.config(opts.diagnostics)
+		vim.lsp.inlay_hint.enable(opts.inlay_hints.enabled)
+		vim.lsp.config("basedpyright", {
+			settings = {
+				basedpyright = {
+					analysis = {
+						autoSearchPaths = true,
+						diagnosticMode = "openFilesOnly",
+					},
+				},
+			},
+		})
 	end,
 }
