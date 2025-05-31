@@ -8,8 +8,10 @@ return {
 	},
 	opts = {
 		ensure_installed = {
+			"astro",
 			"basedpyright",
 			"gopls",
+			"html",
 			"lua_ls",
 			"rust_analyzer",
 			"terraformls",
