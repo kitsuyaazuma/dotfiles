@@ -3,3 +3,4 @@ if vim.g.neovide then
 end
 require("config.options")
 require("config.lazy")
+require("config.autocmds")
