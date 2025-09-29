@@ -10,6 +10,22 @@ ln -snfv ${PWD}/neovim ${NVIM_DIR}
 
 OS=$(uname -s)
 
+if ! command -v mise &> /dev/null; then
+    echo "install mise"
+    # https://mise.jdx.dev/installing-mise.html
+
+    if [ -n "$BASH_VERSION" ]; then
+        curl https://mise.run/bash | sh
+        # Installs mise and adds activation to ~/.bashrc
+    elif [ -n "$ZSH_VERSION" ]; then
+        curl https://mise.run/zsh | sh
+        # Installs mise and adds activation to ~/.zshrc
+    fi
+    # mise use --global golang
+    # mise use --global terraform
+    # mise use --global python
+fi
+
 if ! command -v node &> /dev/null; then
     echo "install Node.js"
     # https://nodejs.org/en/download
