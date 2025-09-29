@@ -8,7 +8,6 @@ return {
 	},
 	opts = {
 		ensure_installed = {
-			"astro",
 			"basedpyright",
 			"gopls",
 			"html",
@@ -20,6 +19,7 @@ return {
 		},
 		automatic_enable = {
 			exclude = {
+                "gopls",
 				"rust_analyzer",
 				"terraformls",
 			},

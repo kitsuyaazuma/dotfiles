@@ -5,9 +5,24 @@ BASE_DIR=$(dirname $0)
 cd $BASE_DIR
 NVIM_DIR=${HOME}/.config/nvim
 rm -rf ${NVIM_DIR}
+mkdir -p ${HOME}/.config
 ln -snfv ${PWD}/neovim ${NVIM_DIR}
 
 OS=$(uname -s)
+
+if ! command -v node &> /dev/null; then
+    echo "install Node.js"
+    # https://nodejs.org/en/download
+
+    if ! command -v nvm &> /dev/null; then
+	echo "install nvm"
+	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+	export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    fi
+
+    nvm install --lts
+fi
 
 if ! command -v nvim &> /dev/null; then
     echo "install Neovim"
