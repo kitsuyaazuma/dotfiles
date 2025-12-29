@@ -70,6 +70,6 @@ return {
 
 		vim.lsp.config("ts_ls", {
 			capabilities = capabilities,
-        })
+		})
 	end,
 }

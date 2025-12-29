@@ -19,9 +19,15 @@ return {
 		},
 		automatic_enable = {
 			exclude = {
-                "gopls",
-				"rust_analyzer",
-				"terraformls",
+				-- "astro",
+				-- "basedpyright",
+				-- "gopls",
+				-- "html",
+				-- "lua_ls",
+				-- "rust_analyzer",
+				-- "terraformls",
+				-- "ts_ls",
+				-- "yamlls",
 			},
 		},
 	},
