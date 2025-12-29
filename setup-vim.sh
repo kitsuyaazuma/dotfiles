@@ -50,24 +50,6 @@ else
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
-# https://github.com/ku1ik/vim-monokai
-mkdir -p ~/.vim/colors
-if [ -f ~/.vim/colors/monokai.vim ]; then
-    echo "vim-monokai already installed"
-else
-    echo "install vim-monokai"
-    wget https://raw.githubusercontent.com/ku1ik/vim-monokai/master/colors/monokai.vim -P ~/.vim/colors/
-fi
-
-# https://github.com/airblade/vim-gitgutter
-if [ -d ~/.vim/pack/airblade/start/vim-gitgutter ]; then
-    echo "vim-gitgutter already installed"
-else
-    echo "install vim-gitgutter"
-    git clone https://github.com/airblade/vim-gitgutter.git ~/.vim/pack/airblade/start/vim-gitgutter
-    vim -u NONE -c "helptags vim-gitgutter/doc" -c q
-fi
-
 mkdir -p ~/.vim/config
 if [ -f ~/.vim/config/coc-example-config.vim ]; then
     echo "coc.nvim already configured"

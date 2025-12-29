@@ -5,10 +5,6 @@ set encoding=UTF-8
 
 runtime! config/*.vim
 
-"https://github.com/ku1ik/vim-monokai
-syntax enable
-colorscheme monokai
-
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
 highlight LineNr ctermbg=none
@@ -73,7 +69,17 @@ Plug 'github/copilot.vim'
 " https://github.com/sheerun/vim-polyglot
 Plug 'sheerun/vim-polyglot'
 
+" https://github.com/airblade/vim-gitgutter
+Plug 'airblade/vim-gitgutter'
+
+" https://github.com/ku1ik/vim-monokai
+Plug 'ku1ik/vim-monokai'
+
 call plug#end()
+
+"https://github.com/ku1ik/vim-monokai
+syntax enable
+colorscheme monokai
 
 let g:previm_open_cmd = 'open -a "Google Chrome"'
 
