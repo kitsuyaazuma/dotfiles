@@ -43,12 +43,10 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 " :CocCommand go.install.gopls
 " :CocInstall coc-pyright
 " :CocInstall coc-rust-analyzer
+" :CocInstall coc-terraform
 
 " https://github.com/easymotion/vim-easymotion
 Plug 'easymotion/vim-easymotion'
-
-" https://github.com/rust-lang/rust.vim
-Plug 'rust-lang/rust.vim'
 
 " https://github.com/previm/previm
 Plug 'kannokanno/previm'
@@ -68,12 +66,12 @@ Plug 'yuki-yano/fern-preview.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" https://github.com/hashivim/vim-terraform
-Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
-
 " https://github.com/github/copilot.vim
 Plug 'github/copilot.vim'
 " :Copilot setup
+
+" https://github.com/sheerun/vim-polyglot
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 

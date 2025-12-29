@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# https://qiita.com/ganyariya/items/d9adffc6535dfca6784b
 set -u
 BASEDIR=$(dirname $0)
 cd $BASEDIR
@@ -18,6 +17,21 @@ if ! command -v node &> /dev/null; then
 
     nvm install --lts
 fi
+
+if ! command -v mise &> /dev/null; then
+    echo "install mise"
+    # https://mise.jdx.dev/installing-mise.html
+
+    if [ -n "$BASH_VERSION" ]; then
+        curl https://mise.run/bash | sh
+        # Installs mise and adds activation to ~/.bashrc
+    elif [ -n "$ZSH_VERSION" ]; then
+        curl https://mise.run/zsh | sh
+        # Installs mise and adds activation to ~/.zshrc
+    fi
+    # mise use --global terraform-ls
+fi
+
 
 # https://github.com/ryanoasis/nerd-fonts
 if [ -d ~/nerd-fonts ]; then

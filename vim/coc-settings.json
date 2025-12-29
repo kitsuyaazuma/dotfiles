@@ -15,12 +15,6 @@
 			"initializationOptions": {
 				"usePlaceholders": true
 			}
-		},
-		"terraform": {
-			"command": "terraform-lsp",
-			"filetypes": [
-				"terraform"
-			]
 		}
 	},
 	"diagnostic.virtualText": true,
@@ -28,7 +22,9 @@
 	"python.linting.enabled": true,
 	"python.formatting.provider": "ruff",
 	"python.linting.ruffEnabled": true,
-	"[python]": {
-		"coc.preferences.formatOnSave": true
-	}
+  "coc.preferences.formatOnSaveFiletypes": [
+    "python",
+    "go",
+    "terraform"
+  ]
 }
