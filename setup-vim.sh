@@ -45,15 +45,6 @@ else
     wget https://raw.githubusercontent.com/ku1ik/vim-monokai/master/colors/monokai.vim -P ~/.vim/colors/
 fi
 
-# https://github.com/github/copilot.vim
-if [ -d ~/.vim/pack/github/start/copilot.vim ]; then
-    echo "copilot.vim already installed"
-else
-    echo "install copilot.vim"
-    git clone https://github.com/github/copilot.vim.git ~/.vim/pack/github/start/copilot.vim
-    #TODO :Copilot setup
-fi
-
 # https://github.com/airblade/vim-gitgutter
 if [ -d ~/.vim/pack/airblade/start/vim-gitgutter ]; then
     echo "vim-gitgutter already installed"

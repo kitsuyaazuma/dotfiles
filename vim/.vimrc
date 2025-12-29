@@ -71,6 +71,10 @@ Plug 'vim-airline/vim-airline-themes'
 " https://github.com/hashivim/vim-terraform
 Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 
+" https://github.com/github/copilot.vim
+Plug 'github/copilot.vim'
+" :Copilot setup
+
 call plug#end()
 
 let g:previm_open_cmd = 'open -a "Google Chrome"'
