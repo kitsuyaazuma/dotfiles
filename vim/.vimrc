@@ -75,11 +75,17 @@ Plug 'airblade/vim-gitgutter'
 " https://github.com/ku1ik/vim-monokai
 Plug 'ku1ik/vim-monokai'
 
+" https://github.com/junegunn/fzf
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
 "https://github.com/ku1ik/vim-monokai
 syntax enable
 colorscheme monokai
+
+let mapleader = "\<Space>"
 
 let g:previm_open_cmd = 'open -a "Google Chrome"'
 
@@ -88,6 +94,10 @@ let g:rustfmt_autosave = 1
 nnoremap <C-n> :Fern . -reveal=% -drawer -toggle -width=40<CR>
 let g:fern#default_hidden = 1
 let g:fern#renderer = "nerdfont"
+
+nnoremap <leader>ff :Files<CR>
+nnoremap <leader>fg :Rg<CR>
+nnoremap <leader>fb :Buffers<CR>
 
 let g:airline#extensions#tabline#enabled = 1
 
