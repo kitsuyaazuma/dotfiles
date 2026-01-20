@@ -13,6 +13,8 @@ cd dotfiles
 
 ### iTerm2
 
+This profile requires [Hack Nerd Font](https://github.com/ryanoasis/nerd-fonts).
+
 ```bash
 # chmod +x ./setup-iterm2.sh
 ./setup-iterm2.sh
