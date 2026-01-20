@@ -6,21 +6,30 @@ This is [kitsuyaazuma](https://github.com/kitsuyaazuma)'s dotfiles.
 
 ```bash
 git clone git@github.com:kitsuyaazuma/dotfiles.git
+# git clone https://github.com/kitsuyaazuma/dotfiles.git
+
 cd dotfiles
+```
+
+### iTerm2
+
+```bash
+# chmod +x ./setup-iterm2.sh
+./setup-iterm2.sh
 ```
 
 ### Vim
 
 ```bash
-chmod +x ./setup-vim.sh
+# chmod +x ./setup-vim.sh
 ./setup-vim.sh
 ```
 
 ### Neovim
 
 ```bash
-chmod +x ./setup-nvim.sh
+# chmod +x ./setup-nvim.sh
 ./setup-nvim.sh
-source ~/.bashrc
-# source ~/.zshrc
+source ~/.zshrc
+# source ~/.bashrc
 ```
