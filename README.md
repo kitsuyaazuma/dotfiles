@@ -11,14 +11,23 @@ git clone git@github.com:kitsuyaazuma/dotfiles.git
 cd dotfiles
 ```
 
+### Homebrew
+
+```bash
+./setup-homebrew.sh
+```
+
+### Zsh
+
+```bash
+./setup-zsh.sh
+```
+
 ### iTerm2
 
 This profile requires [Hack Nerd Font](https://github.com/ryanoasis/nerd-fonts).
 
-```bash
-# chmod +x ./setup-iterm2.sh
-./setup-iterm2.sh
-```
+Import the profile manually: **Profiles > Other Actions... > Import JSON Profiles...** and select `iterm2-profile.json`.
 
 ### Vim
 
