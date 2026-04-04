@@ -7,6 +7,7 @@ $directory\
 $git_branch\
 $git_state\
 $git_status\
+$kubernetes\
 $cmd_duration\
 $line_break\
 $python\
@@ -42,6 +43,11 @@ style = "bright-black"
 [cmd_duration]
 format = "[$duration]($style) "
 style = "yellow"
+
+[kubernetes]
+disabled = false
+detect_env_vars = ['STARSHIP_KUBE']
+format = '[$symbol$context( \($namespace\))]($style) '
 
 [python]
 format = "[$virtualenv]($style) "
