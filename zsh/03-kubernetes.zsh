@@ -11,3 +11,8 @@ function kubeoff() {
 if command -v kubecolor >/dev/null 2>&1; then
   alias kubectl='kubecolor'
 fi
+
+# https://k9scli.io/
+if command -v k9s >/dev/null 2>&1; then
+  alias k9s='LANG=en_US.UTF-8 k9s'
+fi
