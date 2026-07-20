@@ -8,6 +8,7 @@ return {
 			"astro",
 			"bash",
 			"css",
+            "cue",
 			"go",
 			"gomod",
 			"html",
