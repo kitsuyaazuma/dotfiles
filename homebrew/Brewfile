@@ -1,3 +1,4 @@
+tap "metalbear-co/mirrord", trusted: true
 brew "fzf"
 brew "gh"
 brew "git-lfs"
@@ -7,6 +8,7 @@ brew "jq"
 brew "k9s"
 brew "kubecolor"
 brew "kubectx"
+brew "mirrord"
 brew "neovim"
 brew "nodenv"
 brew "poppler"
